@@ -6,7 +6,7 @@ import { DetaleComponent } from './detale/detale.component';
 
 const routes: Routes = [
   { path: '', component: ListaComponent },
-  { path: 'film/:id', component: DetaleComponent }
+  { path: 'film/:id', component: DetaleComponent },
 ];
 
 @NgModule({

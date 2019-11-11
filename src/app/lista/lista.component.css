@@ -1,0 +1,12 @@
+.movielist {
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid goldenrod;
+  cursor: pointer;
+}
+
+h3 {
+    color: white;
+    
+}

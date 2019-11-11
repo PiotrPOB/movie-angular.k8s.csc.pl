@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { DetaleComponent } from './detale/detale.component';
+import { FilmyService } from './filmy.service';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { DetaleComponent } from './detale/detale.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FilmyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

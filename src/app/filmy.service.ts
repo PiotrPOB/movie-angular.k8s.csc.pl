@@ -12,7 +12,6 @@ export class FilmyService {
     { id: 1, tytul: 'Terminator 3', rok: 2003, opis: 'T-800 zostaje wysłany w przeszłość, by chronić Johna Connora i jego przyjaciółkę Kate Brewster. Ich przeciwnikiem jest cyborg T-X.', link: 'https://www.youtube.com/watch?v=zdYYI_2Tudg' },
     { id: 2, tytul: 'Pulp Fiction', rok: 1994, opis: 'Przemoc i odkupienie w opowieści o dwóch płatnych mordercach pracujących na zlecenie mafii, żonie gangstera, bokserze i parze okradającej ludzi w restauracji.', link: 'https://www.youtube.com/watch?v=s7EdQ4FqbhY' },
     { id: 3, tytul: 'Vanila Sky', rok: 2001, opis: 'Milioner zadurza się w dziewczynie przyjaciela. Tym samym ściąga na siebie gniew swojej dotychczasowej kochanki.', link: 'https://www.youtube.com/watch?v=k09OX40NLUw' }
-
   ];
 
   constructor() { }

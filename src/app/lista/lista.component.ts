@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../modele/film';
 import { FilmyService } from '../filmy.service';
+import { error } from 'util';
 
 @Component({
   selector: 'app-lista',
@@ -14,8 +15,16 @@ export class ListaComponent implements OnInit {
   constructor(private fS: FilmyService) { }
 
   ngOnInit() {
-    this.filmy = this.fS.wszystkieFilmy();
-    // console.table(this.filmy);
+    this.fS.wszystkieFilmy().subscribe(
+      (dane) => {
+        this.filmy = dane;
+      },
+      (error) => {
+        console.log(error);
+      }
+
+      );
+    console.table(this.filmy);
   }
 
 }

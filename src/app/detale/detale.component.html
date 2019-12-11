@@ -1,5 +1,5 @@
 <h1> {{ film.tytul}} ({{ film.rok}})</h1>
-<img src="assets/{{film.tytul}}.jpg" height="400px" />
+<img src="{{baseURL}}{{ film.plakat }}" height="400px" />
 <h4> {{film. opis }} </h4>
-<p> Zobacz trialier : <a href="{{ film.link}}">kliknij w link</a> </p>
+<!-- <p> Zobacz trialier : <a href="{{ film.link}}">kliknij w link</a> </p> -->
 <button (click)="cofnij()">Cofnij</button>

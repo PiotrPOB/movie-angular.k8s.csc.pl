@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Film } from '../modele/film';
 import { FilmyService } from '../filmy.service';
 import { Location } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-detale',
@@ -12,7 +13,7 @@ import { Location } from '@angular/common';
 export class DetaleComponent implements OnInit {
 
   film: Film;
-  baseURL = 'http://127.0.0.1:8000';
+  private baseURL: String = environment.apiURL;
 
   constructor(
     private route: ActivatedRoute, private fs: FilmyService, private location: Location) { }

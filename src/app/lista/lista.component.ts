@@ -11,6 +11,7 @@ import { error } from 'util';
 export class ListaComponent implements OnInit {
 
   filmy: Film[];
+  wiadomosc: String = '';
 
   constructor(private fS: FilmyService) { }
 
@@ -20,10 +21,11 @@ export class ListaComponent implements OnInit {
         this.filmy = dane;
       },
       (error) => {
+        this.wiadomosc = 'Wystąpił błąd serwera. Sporóbuj później.';
         console.log(error);
       }
 
-      );
+    );
     console.table(this.filmy);
   }
 

@@ -1,5 +1,12 @@
-<h1> {{ film.tytul}} ({{ film.rok}})</h1>
-<img src="{{baseURL}}{{ film.plakat }}" height="400px" />
-<h4> {{film. opis }} </h4>
-<!-- <p> Zobacz trialier : <a href="{{ film.link}}">kliknij w link</a> </p> -->
-<button (click)="cofnij()">Cofnij</button>
+<div *ngIf='film'>
+  <h1> {{ film?.tytul}} ({{ film.rok}})</h1>
+  <img src="{{baseURL}}{{ film?.plakat }}" height="400px" />
+  <h4> {{film?.opis }} </h4>
+  <!-- <p> Zobacz trialier : <a href="{{ film.link}}">kliknij w link</a> </p> -->
+  <button (click)="cofnij()">Cofnij</button>
+
+</div>
+
+<!-- Znaki zapytania dodane są w celu takim, ze na samym początku aplikacja inicjuje objekt film ale jeszcze nie zapytuje do bazy, więc consola wyrzuca błąd, 
+    ze pewne dane nie zostały wczytane. Znak zapytania mówi uzyj zmiennej wtedy kiedy będzie dostępna!
+Drugim sposobem jest zrobienie warunku ngIf jak powzej -->

@@ -18,14 +18,20 @@ export class FilmyService {
   // ];
 
   private baseURL: String = environment.apiURL;
+  private token: String = '0fb8e17aba31cfcc584457d614dd77c85ff5799e';
+  private httpHeaders = new HttpHeaders(
+    {
+      'Authorization': `Token ${this.token}`
+    }
+  )
 
   constructor(private http: HttpClient) { }
 
   wszystkieFilmy(): Observable<any> {
-    return this.http.get(`${this.baseURL}/apifilmy/`);
+    return this.http.get(`${this.baseURL}/apifilmy/`, { headers: this.httpHeaders });
   }
 
   getFilm(id: number): Observable<Film> {
-    return this.http.get<Film>(`${this.baseURL}/apifilmy/${id}/`);
+    return this.http.get<Film>(`${this.baseURL}/apifilmy/${id}/`, { headers: this.httpHeaders });
   }
 }

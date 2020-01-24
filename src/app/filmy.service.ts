@@ -18,7 +18,7 @@ export class FilmyService {
   // ];
 
   private baseURL: String = environment.apiURL;
-  private token: String = '0fb8e17aba31cfcc584457d614dd77c85ff5799e';
+  private token: String = '8ca73faf410c39dc7ecbb0a2cc995385c26834f4';
   private httpHeaders = new HttpHeaders(
     {
       'Authorization': `Token ${this.token}`
@@ -28,10 +28,10 @@ export class FilmyService {
   constructor(private http: HttpClient) { }
 
   wszystkieFilmy(): Observable<any> {
-    return this.http.get(`${this.baseURL}/apifilmy/`, { headers: this.httpHeaders });
+    return this.http.get(`${this.baseURL}/api/movies/`, { headers: this.httpHeaders });
   }
 
   getFilm(id: number): Observable<Film> {
-    return this.http.get<Film>(`${this.baseURL}/apifilmy/${id}/`, { headers: this.httpHeaders });
+    return this.http.get<Film>(`${this.baseURL}/api/movies/${id}/`, { headers: this.httpHeaders });
   }
 }
